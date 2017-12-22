@@ -1,4 +1,4 @@
-# rocksaw-ping-example-x64
+# Rocksaw Ping Example x64
 Exemple Ping Rocksaw with JAR and DLL x64
 
 ### Install
