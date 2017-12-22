@@ -264,16 +264,16 @@ public class Ping {
   }
 
   public static final void main(String[] args) throws Exception {
-//    if(args.length < 1 || args.length > 2) {
-//      System.err.println("usage: Ping host [count]");
-//      System.exit(1);
-//    }
+    if(args.length < 1 || args.length > 2) {
+      System.err.println("usage: Ping host [count]");
+      System.exit(1);
+    }
 
     final ScheduledThreadPoolExecutor executor =
       new ScheduledThreadPoolExecutor(2);
 
     try{
-      final InetAddress address = InetAddress.getByName("8.8.8.8");
+      final InetAddress address = InetAddress.getByName(args[0]);
       final String hostname = address.getCanonicalHostName();
       final String hostaddr = address.getHostAddress();
       final int count;
